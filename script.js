@@ -53,15 +53,17 @@ function updateSpeedColour(speedKmH){
     let backgroundColour;
     let textColour;
 
-    if(speedKmH <= 5){
-        backgroundColour = "rgb(248, 215, 218)";
+    if(speedKmH <= 2){
+        backgroundColour = "rgb(248, 215, 218)";            // this is being added as css hence "string"
         textColour = "rgb(132, 32, 41)";
     }
-    else if(5 < speedKmH <= 10){
+    
+    if(2 < speedKmH <= 4){
         backgroundColour = "rgb(255, 243, 205)";
         textColour = "rgb(102, 77, 3)";
     }
-    else{
+
+    if(speedKmH > 4){
         backgroundColour = "rgb(209, 231, 221)";
         textColour = "rgb(15, 81, 50)";
     }
