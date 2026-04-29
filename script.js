@@ -43,6 +43,8 @@ function displaySpeed(metersPerSecond){
     }
 
     let speedKmH = (metersPerSecond * 3.6);             // converts speed from m/s to km/h
+    console.log("ms", metersPerSecond);
+    console.log("km", speedKmH);
 
     $("#speed").text(speedKmH);                                 // displays speed in UI (all decimals)
     $("#currect-speed").text(speedKmH.toFixed(2) + "km/h");     // alert box show speed with only 2 decimals
