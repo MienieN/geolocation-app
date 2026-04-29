@@ -43,8 +43,6 @@ function displaySpeed(metersPerSecond){
     }
 
     let speedKmH = (metersPerSecond * 3.6);             // converts speed from m/s to km/h
-    console.log("ms", metersPerSecond);
-    console.log("km", speedKmH);
 
     $("#speed").text(speedKmH);                                 // displays speed in UI (all decimals)
     $("#currect-speed").text(speedKmH.toFixed(2) + "km/h");     // alert box show speed with only 2 decimals
@@ -57,12 +55,12 @@ function updateSpeedColour(speedKmH){
     let backgroundColour;
     let textColour;
 
-    if(speedKmH < 2){
+    if(speedKmH < 5){
         backgroundColour = "rgb(248, 215, 218)";            // this is being added as css hence "string"
         textColour = "rgb(132, 32, 41)";
     }
     
-    else if(speedKmH >= 2 && speedKmH <= 4){
+    else if(speedKmH >= 5 && speedKmH < 10){
         backgroundColour = "rgb(255, 243, 205)";
         textColour = "rgb(102, 77, 3)";
     }
