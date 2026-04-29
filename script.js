@@ -58,7 +58,7 @@ function updateSpeedColour(speedKmH){
         textColour = "rgb(132, 32, 41)";
     }
     
-    if(2 < speedKmH <= 4){
+    if(speedKmH > 2 && speedKmH <= 4){
         backgroundColour = "rgb(255, 243, 205)";
         textColour = "rgb(102, 77, 3)";
     }
