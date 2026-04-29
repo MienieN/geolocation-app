@@ -38,6 +38,8 @@ function displaySpeed(metersPerSecond){
             "backgroundColour" : "rgb(248, 215, 218)",
             "textColour" : "rgb(132, 32, 41)"
         });
+
+        return;                                         // stops if speed is null
     }
 
     let speedKmH = (metersPerSecond * 3.6);             // converts speed from m/s to km/h
@@ -50,28 +52,27 @@ function displaySpeed(metersPerSecond){
 
 // updates the alert boxes rather than using generic colours and layout
 function updateSpeedColour(speedKmH){
-    let speed = Number(speedKmH)
     let backgroundColour;
     let textColour;
 
-    if(speed <= 2){
+    if(speed < 2){
         backgroundColour = "rgb(248, 215, 218)";            // this is being added as css hence "string"
         textColour = "rgb(132, 32, 41)";
     }
     
-    if(speed > 2 && speed <= 4){
+    else if(speed >= 2 && speed <= 4){
         backgroundColour = "rgb(255, 243, 205)";
         textColour = "rgb(102, 77, 3)";
     }
 
-    if(speed > 4){
+    else{
         backgroundColour = "rgb(209, 231, 221)";
         textColour = "rgb(15, 81, 50)";
     }
 
     $("#speed-container").css({
         "background-color" : backgroundColour,
-        "color" : textColour,
+        "color" : textColour
     });
 }
 
