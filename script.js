@@ -50,20 +50,21 @@ function displaySpeed(metersPerSecond){
 
 // updates the alert boxes rather than using generic colours and layout
 function updateSpeedColour(speedKmH){
+    let speed = Number(speedKmH)
     let backgroundColour;
     let textColour;
 
-    if(speedKmH <= 2){
+    if(speed <= 2){
         backgroundColour = "rgb(248, 215, 218)";            // this is being added as css hence "string"
         textColour = "rgb(132, 32, 41)";
     }
     
-    if(speedKmH > 2 && speedKmH <= 4){
+    if(speed > 2 && speed <= 4){
         backgroundColour = "rgb(255, 243, 205)";
         textColour = "rgb(102, 77, 3)";
     }
 
-    if(speedKmH > 4){
+    if(speed > 4){
         backgroundColour = "rgb(209, 231, 221)";
         textColour = "rgb(15, 81, 50)";
     }
